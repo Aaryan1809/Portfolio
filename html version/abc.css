@@ -3472,7 +3472,6 @@ body {
         }
     }
 
-    display: grid;
 
     /* --- Projects Section --- */
     .projects-grid {
@@ -3876,6 +3875,7 @@ body {
 .gradient-text {
     background-image: var(--gradient-primary);
     -webkit-background-clip: text;
+    font-size: small;
     background-clip: text;
     color: transparent;
 }
@@ -4027,7 +4027,7 @@ body {
 
 .text-content .text-accent {
     color: var(--accent);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .text-content h1 {
