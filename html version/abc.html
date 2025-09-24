@@ -10,231 +10,638 @@
         <meta name="author" content="Aaryan Soni" />
         <meta name="keywords"
             content="Aaryan Soni, BCA student, web developer, portfolio, C++, frontend development, Vadodara, programming" />
+
+        <meta property="og:title" content="Aaryan Soni - BCA Student & Web Developer" />
+        <meta property="og:description"
+            content="Portfolio showcasing projects in web development, programming, and creative solutions by BCA student Aaryan Soni" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aaryansoni.dev" />
+        <meta property="og:image" content="/og-image.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Aaryan Soni - Web Developer Portfolio" />
+        <meta name="twitter:description"
+            content="BCA student passionate about web development, programming, and technology innovation" />
+        <meta name="twitter:image" content="/og-image.jpg" />
+
+        <link rel="canonical" href="https://aaryansoni.dev" />
+        <meta name="robots" content="index, follow" />
+
+        <meta name="theme-color" content="#7c3aed" />
         <link rel="stylesheet" href="abc.css" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
 
-    <body data-theme="dark">
-
-        <nav class="navigation">
-            <div class="container-custom nav-container">
-                <a href="#" class="logo-button">AS</a>
-                <div class="desktop-menu">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle theme">
-                        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="4" />
-                            <path d="M12 2v2" />
-                            <path d="M12 20v2" />
-                            <path d="m4.93 4.93 1.41 1.41" />
-                            <path d="m17.66 17.66 1.41 1.41" />
-                            <path d="M2 12h2" />
-                            <path d="M20 12h2" />
-                            <path d="m6.34 17.66-1.41 1.41" />
-                            <path d="m19.07 4.93-1.41 1.41" />
-                        </svg>
-                        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                        </svg>
-                    </button>
+    <body>
+        <div id="root">
+            <nav class="navigation">
+                <div class="container-custom">
+                    <div class="nav-content">
+                        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="logo-button">
+                            AS
+                        </button>
+                        <div class="desktop-menu">
+                            <button class="nav-link" data-target="#about">About</button>
+                            <button class="nav-link" data-target="#skills">Skills</button>
+                            <button class="nav-link" data-target="#projects">
+                                Projects
+                            </button>
+                            <button class="primary-button" data-target="#contact">
+                                Get in Touch
+                            </button>
+                        </div>
+                        <button class="mobile-menu-button">
+                            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                                <line x1="4" x2="20" y1="12" y2="12" />
+                                <line x1="4" x2="20" y1="6" y2="6" />
+                                <line x1="4" x2="20" y1="18" y2="18" />
+                            </svg>
+                            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"
+                                style="display: none">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mobile-menu" style="display: none">
+                        <button class="nav-link" data-target="#about">About</button>
+                        <button class="nav-link" data-target="#skills">Skills</button>
+                        <button class="nav-link" data-target="#projects">Projects</button>
+                        <button class="nav-link" data-target="#contact">Contact</button>
+                        <button class="primary-button" data-target="#contact">
+                            Get in Touch
+                        </button>
+                    </div>
                 </div>
-                <button class="mobile-menu-button" aria-label="Toggle Menu">
-                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <line x1="4" x2="20" y1="12" y2="12" />
-                        <line x1="4" x2="20" y1="6" y2="6" />
-                        <line x1="4" x2="20" y1="18" y2="18" />
-                    </svg>
-                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" style="display: none;">
-                        <path d="M18 6 6 18" />
-                        <path d="m6 6 12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="mobile-menu" style="display: none;">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </nav>
+            </nav>
 
-        <main>
-            <section class="hero">
-                <div class="background-gradient"></div>
-                <div class="floating-element-1"></div>
-                <div class="floating-element-2"></div>
-                <div class="container-custom hero-content">
-                    <div class="text-content animate-on-scroll animate-fade-in-left">
-                        <p class="text-accent">Hello, I'm</p>
-                        <h1 class="gradient-text">Aaryan Soni</h1>
-                        <h2 class="subtitle">BCA Student & <span class="text-primary">Web Developer</span></h2>
-                        <p class="description">
-                            A passionate 2nd-year BCA student from Vadodara, exploring the world of
-                            technology through code, creativity, and continuous learning.
+            <main>
+                <section class="hero">
+                    <div class="background-gradient"></div>
+                    <div class="floating-element-1"></div>
+                    <div class="floating-element-2"></div>
+                    <div class="container-custom">
+                        <div class="hero-content">
+                            <div class="text-content">
+                                <p class="text-accent">Hello, I'm</p>
+                                <h1 class="gradient-text">Aaryan Soni</h1>
+                                <h2 class="subtitle">
+                                    BCA Student & <span class="text-primary">Web Developer</span>
+                                </h2>
+                                <p class="description">
+                                    A passionate 2nd-year BCA student from Vadodara, exploring the
+                                    world of technology through code, creativity, and continuous
+                                    learning.
+                                </p>
+                                <div class="button-group">
+                                    <button class="primary-button" data-target="#projects">
+                                        View Projects
+                                    </button>
+                                    <button class="outline-button" data-target="#contact">
+                                        Contact Me
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="profile-image-container">
+                                <div class="profile-image-wrapper">
+                                    <div class="glow-effect"></div>
+                                    <img src="Ghibli art.png" alt="Aaryan Soni - BCA Student & Web Developer"
+                                        class="profile-image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about" class="section-padding">
+                    <div class="container-custom">
+                        <div class="section-header">
+                            <h2 class="gradient-text">About Me</h2>
+                            <p class="section-description">
+                                Currently pursuing my Bachelor's in Computer Applications,
+                                driven by curiosity and a passion for creating meaningful
+                                digital experiences.
+                            </p>
+                        </div>
+                        <div class="about-grid">
+                            <div class="card animate-fade-in-left">
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <div class="icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-graduation-cap">
+                                                <path
+                                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0 0 1.838l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                                                <path d="M22 10v6" />
+                                                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3>Education</h3>
+                                            <p>Academic Journey</p>
+                                        </div>
+                                    </div>
+                                    <div class="education-details">
+                                        <p>Bachelor of Computer Applications</p>
+                                        <p>2nd Year Student</p>
+                                        <div class="cpa-details">
+                                            <p>1st Year CGPA</p>
+                                            <p class="cgpa">8.07/10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card animate-fade-in-up">
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <div class="icon-wrapper accent">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-map-pin">
+                                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                                <circle cx="12" cy="10" r="3" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3>Location</h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="location">Vadodara</p>
+                                        <p>Gujarat, India</p>
+                                        <p>
+                                            Open to remote opportunities and collaborations
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card animate-fade-in-right">
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <div class="icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-trophy">
+                                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                                <path d="M4 22h16" />
+                                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3>Focus Areas</h3>
+                                            <p>What Drives Me</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="focus-title">Current Learning</p>
+                                        <p>Web Development & DSA</p>
+                                        <p class="focus-title">Future Goals</p>
+                                        <p>AI/ML, Cybersecurity, Crypto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="skills" class="section-padding">
+                    <div class="container-custom">
+                        <div class="section-header">
+                            <h2 class="gradient-text">Skills & Expertise</h2>
+                            <p class="section-description">
+                                Technologies I work with and areas I'm passionate about
+                                exploring
+                            </p>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="card animate-fade-in-left">
+                                <div class="card-header">
+                                    <h3 class="gradient-text">Current Skills</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-code-2">
+                                                <path d="m18 16 4-4-4-4" />
+                                                <path d="m6 8-4 4 4 4" />
+                                                <path d="m14.5 4-5 16" />
+                                            </svg>
+                                            <span>C++</span>
+                                        </div>
+                                        <span class="badge intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-globe">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                                <path d="M2 12h20" />
+                                            </svg>
+                                            <span>Frontend Development</span>
+                                        </div>
+                                        <span class="badge proficient">Proficient</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-cpu">
+                                                <rect width="16" height="16" x="4" y="4" rx="2" />
+                                                <rect width="6" height="6" x="9" y="9" rx="1" />
+                                                <path d="M15 2v2" />
+                                                <path d="M15 20v2" />
+                                                <path d="M9 2v2" />
+                                                <path d="M9 20v2" />
+                                                <path d="M2 15h2" />
+                                                <path d="M2 9h2" />
+                                                <path d="M20 15h2" />
+                                                <path d="M20 9h2" />
+                                            </svg>
+                                            <span>Data Structures & Algorithms</span>
+                                        </div>
+                                        <span class="badge learning">Learning</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-zap">
+                                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                            </svg>
+                                            <span>Node.js</span>
+                                        </div>
+                                        <span class="badge beginner">Beginner</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-code-2">
+                                                <path d="m18 16 4-4-4-4" />
+                                                <path d="m6 8-4 4 4 4" />
+                                                <path d="m14.5 4-5 16" />
+                                            </svg>
+                                            <span>Python</span>
+                                        </div>
+                                        <span class="badge intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-video">
+                                                <path d="m22 8-6 4 6 4V8Z" />
+                                                <rect width="14" height="12" x="2" y="6" rx="2" ry="2" />
+                                            </svg>
+                                            <span>Video Editing</span>
+                                        </div>
+                                        <span class="badge proficient">Proficient</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card animate-fade-in-right">
+                                <div class="card-header">
+                                    <h3 class="gradient-text">Interest In</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p class="interest-description">
+                                        Areas I'm excited to explore and master
+                                    </p>
+                                    <div class="interest-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu">
+                                            <rect width="16" height="16" x="4" y="4" rx="2" />
+                                            <rect width="6" height="6" x="9" y="9" rx="1" />
+                                            <path d="M15 2v2" />
+                                            <path d="M15 20v2" />
+                                            <path d="M9 2v2" />
+                                            <path d="M9 20v2" />
+                                            <path d="M2 15h2" />
+                                            <path d="M2 9h2" />
+                                            <path d="M20 15h2" />
+                                            <path d="M20 9h2" />
+                                        </svg>
+                                        <span>Artificial Intelligence</span>
+                                    </div>
+                                    <div class="interest-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                        </svg>
+                                        <span>Machine Learning</span>
+                                    </div>
+                                    <div class="interest-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2">
+                                            <path d="m18 16 4-4-4-4" />
+                                            <path d="m6 8-4 4 4 4" />
+                                            <path d="m14.5 4-5 16" />
+                                        </svg>
+                                        <span>Cryptocurrency</span>
+                                    </div>
+                                    <div class="interest-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                        </svg>
+                                        <span>Cybersecurity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <p>
+                                "I believe in continuous learning and staying humble about my
+                                journey in tech"
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="section-padding">
+                    <div class="container-custom">
+                        <div class="section-header animate-on-scroll animate-fade-in-up">
+                            <h2 class="gradient-text">Featured Projects</h2>
+                            <p class="section-description">
+                                A showcase of projects that reflect my learning journey and passion for creating
+                                meaningful solutions.
+                            </p>
+                        </div>
+                        <div class="projects-grid">
+                            <div class="card project-card animate-on-scroll animate-fade-in-left">
+                                <div class="project-card-header">
+                                    <div class="icon-wrapper primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3>AnnDaan</h3>
+                                        <p class="project-description">A platform connecting food donors with NGOs to
+                                            feed the poor, featuring donation tracking and a rider employment system.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>Food donation management</li>
+                                        <li>NGO partnership system</li>
+                                        <li>Rider employment platform</li>
+                                        <li>Real-time tracking</li>
+                                    </ul>
+                                    <h4>Technologies</h4>
+                                    <div class="tags">
+                                        <span class="badge">Web Development</span>
+                                        <span class="badge">Social Impact</span>
+                                        <span class="badge">Full Stack</span>
+                                    </div>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="outline-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                                        </svg>
+                                        Code
+                                    </a>
+                                    <a href="#" class="outline-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" x2="21" y1="14" y2="3" />
+                                        </svg>
+                                        Demo
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card project-card animate-on-scroll animate-fade-in-right">
+                                <div class="project-card-header">
+                                    <div class="icon-wrapper accent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="10" x2="14" y1="2" y2="2" />
+                                            <line x1="12" x2="12" y1="14" y2="18" />
+                                            <path d="M12 22c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8Z" />
+                                            <path d="M12 12 16 16" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3>Bubble Pop Game</h3>
+                                        <p class="project-description">An interactive browser-based game with a
+                                            60-second time challenge to test speed and accuracy.</p>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>60-second time challenge</li>
+                                        <li>Dynamic number targeting</li>
+                                        <li>Score tracking system</li>
+                                        <li>Responsive design</li>
+                                    </ul>
+                                    <h4>Technologies</h4>
+                                    <div class="tags">
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">Game Development</span>
+                                        <span class="badge">UI/UX</span>
+                                    </div>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="outline-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                                        </svg>
+                                        Code
+                                    </a>
+                                    <a href="#" class="outline-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" x2="21" y1="14" y2="3" />
+                                        </svg>
+                                        Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-projects animate-on-scroll animate-fade-in-up">
+                            <p>More projects in development...</p>
+                            <a href="#" class="outline-button">View All Projects</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="section-padding">
+                    <div class="container-custom">
+                        <div class="section-header">
+                            <h2 class="gradient-text">Let's Connect</h2>
+                            <p class="section-description">
+                                I'm always excited to discuss new opportunities,
+                                collaborations, or just chat about technology.
+                            </p>
+                        </div>
+                        <div class="contact-grid">
+                            <div class="contact-info">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <div class="icon-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-mail">
+                                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3>Discuss Something?</h3>
+                                            </div>
+                                        </div>
+                                        <a href="mailto:aaryanthepiccoder@gmail.com"
+                                            class="email-link">aaryanthepiccoder@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <div class="icon-wrapper accent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-map-pin">
+                                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                                    <circle cx="12" cy="10" r="3" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3>Location</h3>
+                                            </div>
+                                        </div>
+                                        <p class="location">Vadodara, Gujarat, India</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <div class="icon-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-message-circle">
+                                                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3>Let's Talk</h3>
+                                                <p>Open to opportunities</p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            I'm interested in internships, freelance projects, and
+                                            collaboration opportunities in web development.
+                                        </p>
+                                        <div class="social-buttons">
+                                            <br>
+                                            Contact Number: 7383508931
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="connect-cta">
+                                        <div class="icon-wrapper large">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-message-circle">
+                                                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                                            </svg>
+                                        </div>
+                                        <h3>Ready to Connect?</h3>
+                                        <p>
+                                            Whether you have a project in mind, want to discuss
+                                            opportunities, or just want to say hello, I'd love to
+                                            hear from you!
+                                        </p>
+                                        <button class="primary-button"
+                                            onclick="window.location.href = 'mailto:abc@gmail.com'">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-mail">
+                                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                            </svg>
+                                            Send an Email
+                                        </button>
+                                        <p>Or connect with me on social media</p>
+                                        <div class="social-buttons">
+                                            <a href="https://www.linkedin.com/in/aaryan-soni-2327feb" target="_blank"
+                                                rel="noopener noreferrer" class="outline-button">LinkedIn</a>
+
+                                            <a href="https://github.com/Aaryan1809" target="_blank"
+                                                rel="noopener noreferrer" class="outline-button">GitHub</a>
+
+                                            <a href="https://www.instagram.com/aaryan_soni_1/" target="_blank"
+                                                rel="noopener noreferrer" class="outline-button">Instagram</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="footer">
+                        <p>
+                            © 2024 Aaryan Soni. Currently learning and growing in the world of
+                            technology.
                         </p>
-                        <div class="button-group">
-                            <a href="#projects" class="primary-button">View Projects</a>
-                            <a href="#contact" class="outline-button">Contact Me</a>
-                        </div>
-                    </div>
-                    <div class="profile-image-container animate-on-scroll animate-fade-in-right">
-                        <div class="profile-image-wrapper">
-                            <div class="glow-effect"></div>
-                            <img src="profile-placeholder.jpg" alt="Aaryan Soni" class="profile-image" />
-                        </div>
-                    </div>
-            </section>
-
-            <section id="about" class="section-padding">
-                <div class="container-custom">
-                    <div class="section-header animate-on-scroll animate-fade-in-up">
-                        <h2 class="gradient-text">About Me</h2>
-                        <p class="section-description">
-                            Currently pursuing my Bachelor's in Computer Applications, driven by curiosity
-                            and a passion for creating meaningful digital experiences.
-                        </p>
-                    </div>
-                    <div class="about-grid">
-                        <div class="card animate-on-scroll animate-fade-in-left" style="--animation-delay: 0.1s;">
-                            <div class="card-header">
-                                <div class="icon-wrapper primary"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path
-                                            d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0 0 1.838l8.57 3.908a2 2 0 0 0 1.66 0z" />
-                                        <path d="M22 10v6" />
-                                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
-                                    </svg></div>
-                                <div>
-                                    <h3>Education</h3>
-                                    <p class="text-sm">Academic Journey</p>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="font-medium">Bachelor of Computer Applications</p>
-                                <p class="text-sm">2nd Year Student</p>
-                                <div class="cgpa-details">
-                                    <p>1st Year CGPA</p>
-                                    <p class="cgpa">8.07/10</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animate-on-scroll animate-fade-in-up" style="--animation-delay: 0.2s;">
-                            <div class="card-header">
-                                <div class="icon-wrapper accent"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                                        <circle cx="12" cy="10" r="3" />
-                                    </svg></div>
-                                <div>
-                                    <h3>Location</h3>
-                                    <p class="text-sm">Where I'm Based</p>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="location-text">Vadodara</p>
-                                <p class="text-sm">Gujarat, India</p>
-                                <p class="text-xs">Open to remote opportunities</p>
-                            </div>
-                        </div>
-                        <div class="card animate-on-scroll animate-fade-in-right about-grid-span-2"
-                            style="--animation-delay: 0.3s;">
-                            <div class="card-header">
-                                <div class="icon-wrapper primary"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                                        <path d="M4 22h16" />
-                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-                                    </svg></div>
-                                <div>
-                                    <h3>Focus Areas</h3>
-                                    <p class="text-sm">What Drives Me</p>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="focus-title text-primary">Current Learning</p>
-                                <p class="text-sm">Web Development & DSA</p>
-                                <p class="focus-title text-accent">Future Goals</p>
-                                <p class="text-sm">AI/ML, Cybersecurity, Crypto</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="section-padding skills-section">
-                <div class="container-custom">
-                    <div class="section-header animate-on-scroll animate-fade-in-up">
-                        <h2 class="gradient-text">Skills & Expertise</h2>
-                        <p class="section-description">Technologies I work with and areas I'm passionate about
-                            exploring.</p>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="card animate-on-scroll animate-fade-in-left" style="--animation-delay: 0.1s;">
-                        </div>
-                        <div class="card animate-on-scroll animate-fade-in-right" style="--animation-delay: 0.2s;">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="section-padding">
-                <div class="container-custom">
-                    <div class="section-header animate-on-scroll animate-fade-in-up">
-                        <h2 class="gradient-text">Featured Projects</h2>
-                        <p class="section-description">A showcase of projects that reflect my learning journey and
-                            passion for creating meaningful solutions.</p>
-                    </div>
-                    <div class="projects-grid">
-                        <div class="card project-card animate-on-scroll animate-fade-in-left"
-                            style="--animation-delay: 0.1s;">
-                        </div>
-                        <div class="card project-card animate-on-scroll animate-fade-in-right"
-                            style="--animation-delay: 0.2s;">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="section-padding contact-section">
-                <div class="container-custom">
-                    <div class="section-header animate-on-scroll animate-fade-in-up">
-                        <h2 class="gradient-text">Let's Connect</h2>
-                        <p class="section-description">I'm always excited to discuss new opportunities, collaborations,
-                            or just chat about technology.</p>
-                    </div>
-                    <div class="contact-grid">
-                        <div class="contact-info animate-on-scroll animate-fade-in-left"
-                            style="--animation-delay: 0.1s;">
-                        </div>
-                        <div class="card animate-on-scroll animate-fade-in-right" style="--animation-delay: 0.2s;">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>© 2024 Aaryan Soni. All rights reserved.</p>
-        </footer>
-
-        <script src="abc.js"></script>
+                    </footer>
+                </section>
+            </main>
+        </div>
     </body>
-
-</html>
+    <script src="abc.js"></script>
+    </html>
